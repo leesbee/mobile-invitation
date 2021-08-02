@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결혼 초대장</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- kakao api추가 -->
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+      var is_pc = '1'
+      var app_key = '13da3914377346b0b8f74f5309b49dad'
+
+      Kakao.init(app_key);
+
+      function kakao_navi() {
+        if (is_pc == '1') {
+          alert('모바일 기기 전용 기능입니다')
+        }
+        Kakao.Navi.start({
+          name: '한양대에리카컨벤션',
+          x: 37.301657866370356,
+          y: 126.84173171197226,
+          coordType: 'wgs84'
+        });
+      }
+    </script>
+</head>
+<body>
+    <section id="title">
+        <div class="introText 1">
+            <h2>정  이<br>동  슬<br>혁  비</h2>
+        </div>
+        <img src="images/title.jpg" alt="title">
+        <div class="introText 2">
+            <h2>결<br>혼<br>합<br>니<br>다</h2>
+        </div>
+        <div class="introText 3">
+            <div class="container">
+                <p><span>2020년 5월 16일 토요일  PM 02:30</span><br>
+                    한양대학교(안산) 게스트하우스<br>
+                    3층 컨벤션홀
+                </p>
+            </div>            
+        </div>
+    </section>
+    <section id="invitation">
+        <div class="container">
+            <h2>초대합니다</h2>
+            <p>새로운 마음과 새 의미를 간직하며<br>
+                저희 두 사람이 새 출발의<br>
+                첫 걸음을 내딛습니다.<br>
+                좋은 꿈, 바른 뜻으로 올바르게 살 수 있도록<br>
+                축복과 격려주시면<br>
+                더 없는 기쁨으로 간직하겠습니다.
+            </p>
+            <ul class="guestInfo">
+                <li>정대영 신미나의 장남 <span>정동혁</span></li>
+                <li>김연옥의 장녀 <span>이슬비</span></li>
+            </ul>
+        </div>        
+    </section>
+    <section id="call">
+        <div class="banner">
+            <p>소중한 시간을 함께하고 싶습니다.</p>            
+        </div>
+        <ul class="phone">
+            <li>
+                <!-- html전화걸기 link -->
+                <a href="tel:01-123-0000">
+                    <img src="images/icon-male.png" alt="신랑에게 전화하기">
+                </a>
+                <p>신랑에게 전화하기</p>
+            </li>
+            <li>
+                <!-- html전화걸기 link -->
+                <a href="tel:01-123-0000">
+                    <img src="images/icon-female.png" alt="신랑에게 전화하기">
+                </a>
+                <p>신부에게 전화하기</p>
+            </li>
+        </ul>
+    </section>
+    <section id="gallery">
+        <div class="container">
+            <h2>갤러리</h2>
+        <figure>
+            <img src="images/photo01.jpg" alt="">
+        </figure>
+        <ul class="galleryList">
+            <li>
+              <a href="#">
+                  <img src="images/photo01.jpg" alt="1">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                 <img src="images/photo02.jpg" alt="2">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                 <img src="images/photo03.jpg" alt="3">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <img src="images/photo04.jpg" alt="4">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <img src="images/photo05.jpg" alt="5">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <img src="images/photo06.jpg" alt="6">
+              </a>
+            </li>
+            
+        </ul>
+        </div>       
+    </section>
+    <section id="video">
+        <h2>영상</h2>
+        <div class="video">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CzOKVUmSDKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> 
+        <p>행복하게 잘 살겠습니다.</p>       
+    </section>
+    <section id="location">
+        <h2>오시는 길</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25389.85570663733!2d126.82425429032742!3d37.301485910276746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6ec34390e3af%3A0x354133854eb916d3!2z7JeQ66as7Lm07Luo67Kk7IWY!5e0!3m2!1sko!2skr!4v1627606855149!5m2!1sko!2skr" style="border:0;width:100%;height:30vh" allowfullscreen="" loading="lazy"></iframe>
+        <div class="container">
+            <ul class="appLink">
+                <li><a href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx20401a447f994002b83f0e74e5482a2d&name=에리카컨벤션웨딩홀&lon=127.00517884800654&lat=37.555954592538384" alt="티맵"><img src="images/tmap-icon.png" alt=""></a></li>
+                <li><a href="#"><img src="images/kakao-navi-icon.png" alt="카카오네비"></a></li>
+                <li><a href="http://naver.me/GfaAttly"><img src="images/naver-map-icon.png" alt="네이버맵"></a></li>
+                <li><a href="http://kko.to/QKv_KR04H"><img src="images/kakao-map-icon.png" alt="카카오맵"></a></li>
+            </ul>
+            
+            <dl class="transfer">
+                <dt>지하철:</dt>
+                <dd>지하철 4호선 한대앞역에서 하차 후 2번출구</dd>
+                <dt>버스:</dt>
+                <dd>10-1, 3102  3100, 3101<br>
+                    ▶ 한양대 게스트하우스 하차</dd>
+                <dt>주차안내:</dt>
+                <dd>교내 무료주차</dd>
+            </dl>
+        </div>
+    </section>
+    <footer>
+        <a href="tel:031-123-4567">Tel.031-123-4567</a>
+        <p class="address">안산시 상록구 한양대학로 55<br>
+            한양대학교(안산) 게스트하우스 3층 컨벤션홀</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,229 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    /* font-family: 'Nanum Myeongjo', serif; */
+    color: #444;
+    font-size: 16px;
+}
+ul {
+    list-style-type: none;
+}
+dt {
+    font-weight: bold;
+}
+section h2 {
+    font-size: 20px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+#title img {
+    width: 100%;
+    height: 30vh;
+    /* 비율을 유지하면서 채움 */
+    object-fit: cover; 
+}
+.container { 
+    padding: 20px;
+}
+#title h2 {
+    line-height: 30px;
+    margin-bottom: 24px;
+}
+#title .introText p {
+    color: #606060;
+    line-height: 24px;
+}
+#title .introText {
+    width: 100%;
+    height: 20vh;
+    /* background: #ccc; */
+    /* 수평우측 */
+    justify-content: flex-center;
+    /* 수직하단 */
+    align-items: flex-center;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 700;
+}
+#title .introText .container {
+    font-family:  'Nanum Gothic', sans-serif;
+    font-size: 16px;
+}
+/* 초대장 */
+#invitation { 
+    background:#EBEBEB;
+    padding: 20px;
+}
+#invitation .container {
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+}
+#invitation .container h2 {
+    margin-bottom: 32px;
+}
+#invitation .container p {
+    line-height: 28px;
+    font-size: 14px;
+}
+#invitation .container .guestInfo {
+    margin-top: 29px;
+    line-height: 28px;
+}
+#invitation .container .guestInfo span{
+    font-weight: bold;
+}
+/* 연락하기 */
+#call .banner {
+    height: 72px;
+    background: #ccc;
+    background-image: url(images/banner.jpg);
+    font-family: 'Nanum Myeongjo', serif;
+    text-align: center;
+    line-height: 72px;
+    font-weight: bold;
+    font-size: 14px;
+    background-size: cover;
+}
+#call .phone {
+    text-align: center;
+    padding: 30px 0;
+}
+#call .phone li {
+    display: inline-block;
+    margin-right: 30px;
+}
+#call .phone li:last-child {
+    margin-right: 0;
+}
+#call .phone li p {
+    margin-top: 10px;
+}
+/* 갤러리 */
+#gallery .container {
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+#gallery h2 {
+    margin-bottom: 30px;
+}
+#gallery figure {
+    width: 100%;
+    height: 200px;
+}
+#gallery figure > img {
+    width: 100%;
+    /* 이미지 뜬거 막음 */
+    display: block;
+    /* 높이값 설정하기 */
+    height: 100%;
+    /* 이미지 찌그러짐 막자-crop시키기 */
+    object-fit: cover;
+}
+#gallery .galleryList {
+    /* 이미지 가로로 나열하기 */
+    display: flex;
+    /* 지정된 크기로 줄내림시키기 */
+    flex-wrap: wrap;
+}
+#gallery .galleryList li {
+    /* 전체 (100% - 칼럼여백) / 칼럼수 */
+    width: calc((100% - 20px) / 3);
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 106px;
+    /* outline: 1px solid; */
+}
+#gallery .galleryList li:nth-child(3n) {
+    margin-right: 0;
+}
+#gallery .galleryList li img {
+    width: 100%;
+    height: 106px;
+    /* 이미지비율달라도 크롭해서 자동맞춤 */
+    object-fit: cover;
+}
+/* 영상 */
+/* 비디오 컨테이너= 16 : 9 비율로 제작 */
+.video {
+    /* 가로 100% 기준 세로비율 지정 */
+    padding-bottom: 56.25%;
+    background: #ccc;
+    position: relative;
+}
+.video iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#video {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+#video h2 {
+    margin-bottom: 30px;
+}
+#video p {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Nanum Myeongjo', serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* 오시는 길 */
+#location {
+    text-align: center;
+}
+#location h2 {
+    margin-bottom: 30px;
+}
+#location .appLink {
+    display: flex;
+    /* 중앙정렬*/
+    justify-content: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+/* 마지막 목록만 빼고 마진넣기-축약식 */
+#location .appLink li:not(:last-child) {
+    margin-right: 30px;
+}
+#location .container {
+    padding-top: 30px;
+}
+#location .transfer {
+    text-align: left;
+    line-height: 24px;
+}
+#location .transfer dt {
+    margin-top: 20px;
+}
+/* footer */
+footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #575757;
+    color: white;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+footer .address {
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 18px;
+}
